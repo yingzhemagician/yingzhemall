@@ -12,7 +12,9 @@ public class TokenCache {
 
     private static Logger logger = LoggerFactory.getLogger(TokenCache.class);
 
-    //If exceed 10000 use LRU to remove some cache
+    public static final String TOKEN_PREFIX = "token_";
+
+    //If exceed 10000 use LRU to remove some cacheß
     private static LoadingCache<String, String> localCache = CacheBuilder.newBuilder().initialCapacity(1000).maximumSize(10000).expireAfterAccess(12, TimeUnit.HOURS)
             .build(new CacheLoader<String, String>() {
                 //Default implementation of data loading, if key does not hit, use this
