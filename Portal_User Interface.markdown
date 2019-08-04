@@ -1,6 +1,6 @@
 [MENU]
 
-####1.Login
+#### 1.Login
 
 **/user/login.do**  post(use post to request), open get method for testing
 
@@ -37,7 +37,7 @@ success
 
 -------
 
-####2.Registration
+#### 2.Registration
 **/user/register.do**
 
 > request
@@ -68,7 +68,7 @@ fail
 
 --------
 
-####3.Check the validity of the username
+#### 3.Check the validity of the username
 
 **/user/check_valid.do**
 
@@ -107,7 +107,7 @@ fail
 -----------
 
 
-####4.Get login user information
+#### 4.Get login user information
 **/user/get_user_info.do**
 
 
@@ -145,7 +145,7 @@ fail
 
 ------
 
-####5.Password Forgotten
+#### 5.Password Forgotten
 **/user/forget_get_question.do**
 
 localhost:8080/user/forget_get_question.do?username=yingzhe
@@ -178,7 +178,7 @@ fail
 
 ---------
 
-####6.Answer submission
+#### 6.Answer submission
 **/user/forget_check_answer.do**
 
 localhost:8080/user/forget_check_answer.do?username=aaa&question=aa&answer=sss
@@ -216,7 +216,7 @@ fail
 
 ------
 
-####7.Reset password for password forgotten
+#### 7.Reset password for password forgotten
 **/user/forget_reset_password.do**
 
 localhost:8080/user/forget_reset_password.do?username=aaa&passwordNew=xxx&forgetToken=531ef4b4-9663-4e6d-9a20-fb56367446a5
@@ -254,7 +254,7 @@ fail
 ```
 
 ------
-####8.Reset password for login status
+#### 8.Reset password for login status
 **/user/reset_password.do**
 
 > request
@@ -284,7 +284,7 @@ fail
 ```
 
 ------
-####9.Update personal information for login status
+#### 9.Update personal information for login status
 **/user/update_information.do**
 
 > request
@@ -313,7 +313,7 @@ fail
 ```
 
 ------
-####10.Get the details of the currently logged in user and force login
+#### 10.Get the details of the currently logged in user and force login
 **/user/get_information.do**
 
 
@@ -355,7 +355,7 @@ fail
 ------
 
 
-####11.Log out
+#### 11.Log out
 **/user/logout.do**
 
 > request
@@ -387,7 +387,7 @@ fail
 
 
 
-####Template
+#### Template
 
 **/user/.do**
 

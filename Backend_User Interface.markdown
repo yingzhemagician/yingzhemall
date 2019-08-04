@@ -1,4 +1,4 @@
-####1.Backstage administrator login
+#### 1.Backstage administrator login
 
 **/manage/user/login.do**
 
@@ -40,7 +40,7 @@ fail
 ------
 
 
-####2.User list
+#### 2.User list
 
 **/manage/user/list.do**
 
@@ -135,7 +135,7 @@ or
 ```
 ------
 
-####3.Template
+#### 3.Template
 
 **/REPLACE/.do**
 
