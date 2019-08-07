@@ -1,8 +1,10 @@
-[MENU]
+# Portal User Interface
 
-#### 1.Login
+[TOC]
 
-**/user/login.do**  post(use post to request), open get method for testing
+#### 1. Login
+
+**/user/login.do**  post(use post to request), open get method for testing 
 
 > request
 
@@ -12,7 +14,7 @@ username,password
 > response
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "Wrong Password"
@@ -20,7 +22,7 @@ fail
 ```
 
 success
-```
+```json
 {
     "status": 0,
     "data": {
@@ -37,7 +39,7 @@ success
 
 -------
 
-#### 2.Registration
+#### 2. Registration
 **/user/register.do**
 
 > request
@@ -50,7 +52,7 @@ username,password,email,phone,question,answer
 > response
 
 success
-```
+```json
 {
     "status": 0,
     "msg": "Verify successful"
@@ -59,7 +61,7 @@ success
 
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "Username does not exist"
@@ -68,35 +70,31 @@ fail
 
 --------
 
-#### 3.Check the validity of the username
+#### 3. Check the validity of the username
 
 **/user/check_valid.do**
 
 /check_valid.do?str=admin&type=username ——check the username
-
-
 
 > request
 
 ```
 str,type
 str could be username or email based on the type value
-
 ```
 
 >response
 
 success
-```
+```json
 {
     "status": 0,
     "msg": "Verify successful"
 }
-
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "User already exists"
@@ -107,7 +105,7 @@ fail
 -----------
 
 
-#### 4.Get login user information
+#### 4. Get login user information
 **/user/get_user_info.do**
 
 
@@ -119,7 +117,7 @@ No parameters
 > response
 
 success
-```
+```json
 {
     "status": 0,
     "data": {
@@ -135,22 +133,19 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "The user is not logged in and cannot get current user information."
 }
-
 ```
 
 ------
 
-#### 5.Password Forgotten
+#### 5. Password Forgotten
 **/user/forget_get_question.do**
 
 localhost:8080/user/forget_get_question.do?username=yingzhe
-
-
 
 > request
 
@@ -161,7 +156,7 @@ username
 
 success
 
-```
+```json
 {
     "status": 0,
     "data": "The question"
@@ -169,7 +164,7 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "The user has not set a password recovery question"
@@ -198,7 +193,7 @@ There is a token in the correct response, we will use this when changing the pas
 
 success
 
-```
+```json
 {
     "status": 0,
     "data": "531ef4b4-9663-4e6d-9a20-fb56367446a5"
@@ -207,7 +202,7 @@ success
 
 fail
 
-```
+```json
 {
     "status": 1,
     "msg": "Wrong answer"
@@ -216,7 +211,7 @@ fail
 
 ------
 
-#### 7.Reset password for password forgotten
+#### 7. Reset password for password forgotten
 **/user/forget_reset_password.do**
 
 localhost:8080/user/forget_reset_password.do?username=aaa&passwordNew=xxx&forgetToken=531ef4b4-9663-4e6d-9a20-fb56367446a5
@@ -231,7 +226,7 @@ username,passwordNew,forgetToken
 
 success
 
-```
+```json
 {
     "status": 0,
     "msg": "Password has been updated"
@@ -239,14 +234,14 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "Changing operation is invalid"
 }
 ```
-或
-```
+
+```json
 {
     "status": 1,
     "msg": "Token has expired"
@@ -254,21 +249,20 @@ fail
 ```
 
 ------
-#### 8.Reset password for login status
+#### 8. Reset password for login status
 **/user/reset_password.do**
 
 > request
 
 ```
 passwordOld,passwordNew
-
 ```
 
 > response
 
 success
 
-```
+```json
 {
     "status": 0,
     "msg": "Password has been updated"
@@ -276,7 +270,7 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "Old password wrong"
@@ -284,7 +278,7 @@ fail
 ```
 
 ------
-#### 9.Update personal information for login status
+#### 9. Update personal information for login status
 **/user/update_information.do**
 
 > request
@@ -297,7 +291,7 @@ email,phone,question,answer
 
 success
 
-```
+```json
 {
     "status": 0,
     "msg": "Update personal information successfully"
@@ -305,7 +299,7 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "User not logged in"
@@ -313,7 +307,7 @@ fail
 ```
 
 ------
-#### 10.Get the details of the currently logged in user and force login
+#### 10. Get the details of the currently logged in user and force login
 **/user/get_information.do**
 
 
@@ -325,7 +319,7 @@ No parameters
 > response
 
 success
-```
+```json
 {
     "status": 0,
     "data": {
@@ -344,10 +338,10 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 10,
-    "msg": "The user is not logged in and cannot obtain current user information,status=10,force login"
+    "msg": "The user is not logged in and cannot obtain current user information, status=10, force login"
 }
 
 ```
@@ -355,7 +349,7 @@ fail
 ------
 
 
-#### 11.Log out
+#### 11. Log out
 **/user/logout.do**
 
 > request
@@ -368,7 +362,7 @@ No parameters
 
 success
 
-```
+```json
 {
     "status": 0,
     "msg": "Log out successfully"
@@ -376,7 +370,7 @@ success
 ```
 
 fail
-```
+```json
 {
     "status": 1,
     "msg": "Server exception"
