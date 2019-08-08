@@ -180,5 +180,19 @@ public class UserServiceImpl implements IUserService {
     }
 
 
+    //backend
+    /**
+     *
+     * @param user
+     * @return YingzheGroup.yingzhemall.common.ServerResponse
+     * check admin role
+     */
+    public ServerResponse checkAdminRole(User user){
+        if(user != null && user.getRole().intValue() == Const.Role.ROLE_ADMIN){
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
+    }
+
 
 }
