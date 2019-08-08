@@ -1,10 +1,15 @@
 # Backend Category Management Interface
-
-[TOC]
-
 ------
 
-####1. Get subnode of category(same level)
+Table of Contents
+=================
+
+* [1. Get subnode of category(same level)](#1-get-subnode-of-categorysame-level)
+* [2. Add category node](#2-add-category-node)
+* [3. Set category name](#3-set-category-name)
+* [4. Get current category id and the subnode category id recursively](#4-get-current-category-id-and-the-subnode-category-id-recursively)
+
+#### 1. Get subnode of category(same level)
 
 http://localhost:8080/manage/category/get_category.do
 
@@ -71,7 +76,7 @@ or
 
 ------
 
-####2. Add category node
+#### 2. Add category node
 
 **/manage/category/add_category.do**
 
@@ -103,7 +108,7 @@ fail
 
 ------
 
-####3. Set category name
+#### 3. Set category name
 
 http://localhost:8080/manage/category/set_category_name.do?categoryId=999&categoryName=%E5%98%BB%E5%98%BB
 http://localhost:8080/manage/category/set_category_name.do?categoryId=1&categoryName=%E5%98%BB%E5%98%BB
@@ -140,7 +145,7 @@ fail
 ------
 
 
-####4. Get current category id and the subnode category id recursively
+#### 4. Get current category id and the subnode category id recursively
 
 http://localhost:8080/manage/category/get_deep_category.do?categoryId=100001
 

@@ -1,6 +1,8 @@
 # Backend User Interface
 
-[TOC]
+* [1. Backstage administrator login](#1-backstage-administrator-login)
+* [2. User list](#2-user-list)
+* [3. Template](#3-template)            
 
 #### 1. Backstage administrator login
 

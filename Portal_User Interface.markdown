@@ -1,6 +1,17 @@
 # Portal User Interface
 
-[TOC]
+* [1. Login](#1-login)
+* [2. Registration](#2-registration)
+* [3. Check the validity of the username](#3-check-the-validity-of-the-username)
+* [4. Get login user information](#4-get-login-user-information)
+* [5. Password Forgotten](#5-password-forgotten)
+* [6.Answer submission](#6answer-submission)
+* [7. Reset password for password forgotten](#7-reset-password-for-password-forgotten)
+* [8. Reset password for login status](#8-reset-password-for-login-status)
+* [9. Update personal information for login status](#9-update-personal-information-for-login-status)
+* [10. Get the details of the currently logged in user and force login](#10-get-the-details-of-the-currently-logged-in-user-and-force-login)
+* [11. Log out](#11-log-out)
+* [Template](#template)
 
 #### 1. Login
 

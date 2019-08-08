@@ -5,6 +5,3 @@
 [Backend User Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Backend_User%20Interface.markdown)
 
 [Backend Category Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Backend_Category%20Interface.markdown)
-
-
-
