@@ -1,4 +1,10 @@
-#### 1.Backstage administrator login
+# Backend User Interface
+
+* [1. Backstage administrator login](#1-backstage-administrator-login)
+* [2. User list](#2-user-list)
+* [3. Template](#3-template)            
+
+#### 1. Backstage administrator login
 
 **/manage/user/login.do**
 
@@ -14,7 +20,7 @@ String password
 
 success
 
-```
+```json
 {
     "status": 0,
     "data": {
@@ -40,7 +46,7 @@ fail
 ------
 
 
-#### 2.User list
+#### 2. User list 
 
 **/manage/user/list.do**
 
@@ -56,7 +62,7 @@ pageNum(default=1)
 
 success
 
-```
+```json
 {
     "status": 0,
     "data": {
@@ -116,7 +122,7 @@ success
 ```
 
 fail
-```
+```json
 {
   "status": 10,
   "msg": "User is not logged in, please log in"
@@ -130,12 +136,10 @@ or
   "msg": "Permission denied"
 }
 
-
-
 ```
 ------
 
-#### 3.Template
+#### 3. Template
 
 **/REPLACE/.do**
 
