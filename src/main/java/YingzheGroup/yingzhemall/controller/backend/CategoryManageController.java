@@ -54,4 +54,34 @@ public class CategoryManageController {
             return ServerResponse.createByErrorMessage("Wrong Permission, you need to login as admin.");
         }
     }
+
+    @RequestMapping("get_category.do")
+    @ResponseBody
+    public ServerResponse getChildrenParallelCategory(HttpSession session, @RequestParam(value = "categoryId", defaultValue = "0") Integer categoryId){
+        User user = (User)session.getAttribute(Const.CURRENT_USER);
+        if(user == null){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), "The user need to login.");
+        }
+        if(iUserService.checkAdminRole(user).isSuccess()){
+            return iCategoryService.getChildrenParallelCategory(categoryId);
+        }else{
+            return ServerResponse.createByErrorMessage("Wrong Permission, you need to login as admin.");
+        }
+    }
+
+    @RequestMapping("get_deep_category.do")
+    @ResponseBody
+    public ServerResponse getCategoryAndDeepChildrenCategory(HttpSession session, @RequestParam(value = "categoryId", defaultValue = "0") Integer categoryId){
+        User user = (User)session.getAttribute(Const.CURRENT_USER);
+        if(user == null){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), "The user need to login.");
+        }
+        if(iUserService.checkAdminRole(user).isSuccess()){
+            return iCategoryService.selectCategoryAndChildrenById(categoryId);
+        }else{
+            return ServerResponse.createByErrorMessage("Wrong Permission, you need to login as admin.");
+        }
+    }
+
+
 }
