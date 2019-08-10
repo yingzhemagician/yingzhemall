@@ -1,4 +1,4 @@
-#Enterprise-Level E-commerce Platform Server Side
+# Enterprise-Level E-commerce Platform Server Side
 
 ## Introduction
 
@@ -11,19 +11,19 @@ To be continued...
 ## Documents
 
 * User Module:
-  * [Portal User Interface](Portal_User Interface.md)
-  * [Backend User Interface](Backend_User Interface.md)
+  * [Portal User Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Portal_User%20Interface.md)
+  * [Backend User Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Backend_User%20Interface.md)
 * Category Module:
-  * [Backend Category Interface](Backend_Category Interface.md)
+  * [Backend Category Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Backend_Category%20Interface.md)
 * Product Module:
-  * [Portal Product Interface](Protal_Product Interface.md)
-  * [Backend Product Interface](Backend_Product Interface.md)
+  * [Portal Product Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Portal_Product%20Interface.md)
+  * [Backend Product Interface](https://github.com/yingzhemagician/yingzhemall/blob/master/Backend_Product%20Interface.md)
 
 
 
 ## A General Architecture of Large Project
 
-![A General Architecture of Large Project](image_resource/A_general_architecture_of _arge_project.png)
+![A General Architecture of Large Project](https://github.com/yingzhemagician/yingzhemall/blob/master/image_resource/A_general_architecture_of_arge_project.png)
 
 ## Environment
 
